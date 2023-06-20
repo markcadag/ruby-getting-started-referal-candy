@@ -4,7 +4,11 @@
       <img src="<%= asset_path('lang-logo.png') %>">
     </a>
     <h1>Getting Started with Ruby on Referal Candy</h1>
-    <a type="button" class="btn btn-lg btn-default" href="<%= purchases_path %>", target: "_blank"><span class="glyphicon glyphicon-flash"></span>Randomize Referal</a>
+    <%= form_tag(purchases_path, method: 'get') do %>
+      <%= text_field_tag(:email, nil, class: 'form-control mw-60"') %>
+      <br/>
+      <%= submit_tag('Submit', class: 'btn btn-lg btn-default') %>
+    <% end %>
   </div>
 </div>
 <div class="container">

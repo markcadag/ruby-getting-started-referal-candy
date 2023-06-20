@@ -5,7 +5,7 @@ class PurchasesController < ApplicationController
 
   # GET /purchases or /purchases.json
   def index
-    @email =  "markcadag+" + Faker::Alphanumeric.alpha(number: 10) + "@gmail.com"
+    @email = params[:email]
     @lastname = Faker::Name.last_name
     @name = Faker::Name.first_name
     @amount = Faker::Number.number(digits: 3)
