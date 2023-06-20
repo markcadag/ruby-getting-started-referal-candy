@@ -6,8 +6,8 @@ class PurchasesController < ApplicationController
   # GET /purchases or /purchases.json
   def index
     @email = params[:email]
-    @lastname = Faker::Name.last_name
-    @name = Faker::Name.first_name
+    @lastname = params[:last_name]
+    @name = params[:first_name]
     @amount = Faker::Number.number(digits: 3)
     @timestamp = Time.now.to_i
     @external_id = Faker::Alphanumeric.alpha(number: 5)

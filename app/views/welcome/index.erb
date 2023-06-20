@@ -5,7 +5,11 @@
     </a>
     <h1>Getting Started with Ruby on Referal Candy</h1>
     <%= form_tag(purchases_path, method: 'get') do %>
-      <%= text_field_tag(:email, nil, class: 'form-control mw-60"') %>
+      <%= text_field_tag(:email, nil, class: 'form-control mw-60', placeholder: 'Email') %>
+      <br/>
+      <%= text_field_tag(:first_name, nil, class: 'form-control mw-60', placeholder: 'First Name') %>
+      <br/>
+      <%= text_field_tag(:last_name, nil, class: 'form-control mw-60', placeholder: 'Last Name') %>
       <br/>
       <%= submit_tag('Submit', class: 'btn btn-lg btn-default') %>
     <% end %>
