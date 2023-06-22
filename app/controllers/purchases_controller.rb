@@ -8,7 +8,7 @@ class PurchasesController < ApplicationController
     @email = params[:email]
     @lastname = params[:last_name]
     @name = params[:first_name]
-    @amount = Faker::Number.number(digits: 3)
+    @amount = params[:amount]
     @timestamp = Time.now.to_i
     @external_id = Faker::Alphanumeric.alpha(number: 5)
     @account_secret = "55a66d3725684e3038b2d4326eb622f4"

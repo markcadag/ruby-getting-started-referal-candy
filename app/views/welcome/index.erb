@@ -1,9 +1,9 @@
 <div class="jumbotron text-center">
   <div class="container">
-    <a href="/" class="lang-logo">
-      <img src="<%= asset_path('lang-logo.png') %>">
+    <a href="/">
+      <img src="https://edventure.ph/_nuxt/img/edventure_logo.2d37157.svg">
     </a>
-    <h1>Edventure on Referal Candy</h1>
+    <h1>Buy Package<br/> To Join Referral Program</h1>
     <%= form_tag(purchases_path, method: 'get') do %>
       <%= text_field_tag(:email, nil, class: 'form-control mw-60', placeholder: 'Email') %>
       <br/>
@@ -11,7 +11,9 @@
       <br/>
       <%= text_field_tag(:last_name, nil, class: 'form-control mw-60', placeholder: 'Last Name') %>
       <br/>
-      <%= submit_tag('Submit', class: 'btn btn-lg btn-default') %>
+      <%= number_field_tag(:amount, nil, class: 'form-control mw-60', placeholder: 'Amount') %>
+      <br/>
+      <%= submit_tag('Purchase', class: 'btn btn-lg btn-default') %>
     <% end %>
   </div>
 </div>
